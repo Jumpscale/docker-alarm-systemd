@@ -25,6 +25,8 @@ Voila, go to localhost:8888 on your host machine and rejoice.
 
 ## Notes
 
+* Please use a docker version after 1.2.x, which has a fix for https://github.com/dotcloud/docker/issues/2267 (`/etc/resolv.conf` and `/etc/hosts` cannot be mounted read-only).
+
 * You cannot run any such build containers if your host OS does not support systemd (sorry, Ubuntu). 
 
 * At the moment of writing, all containers must be run in privileged mode. Otherwise you will encounter this message `Failed to mount tmpfs at /run: Operation not permitted` on start.
