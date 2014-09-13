@@ -2,7 +2,7 @@
 
 A base Dockerfile with which it is easy to build more specialized systemd-enabled containers. 
 
-Prebuild images are available at docker-hub
+Prebuild images are available at [docker-hub](https://registry.hub.docker.com/u/macedigital/docker-arch-systemd/) and can be pulled in.
 
 ## Example
 
@@ -19,7 +19,7 @@ CMD ["/usr/sbin/init"]
 
 After its done, you can run the following command: 
 
-`docker run --privileged=true -p 127.0.0.1:8887:80 -v /sys/fs/cgroup:/sys/fs/cgroup:ro nginx-test`
+`docker run --privileged=true -p 127.0.0.1:8888:80 -v /sys/fs/cgroup:/sys/fs/cgroup:ro nginx-test`
 
 Voila, go to localhost:8888 on your host machine and rejoice.
 
