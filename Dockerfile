@@ -1,6 +1,6 @@
 # DOCKER-VERSION 1.2.0
 
-FROM base/archlinux:latest
+FROM voxxit/alarm:latest
 MAINTAINER "Matthias Adler" <macedigital@gmail.com>
 
 # remove unneeded pkgs, update and clean cache
@@ -8,6 +8,7 @@ RUN pacman -Rss --noconfirm cronie device-mapper dhcpcd diffutils file \
 gettext nano inetutils netctl iproute2 iputils vi psmisc \
 sysfsutils texinfo usbutils which; \
 pacman -Syu --force --noconfirm; \
+pacman -S --noconfirm coreutils systemd; \
 pacman -Scc --noconfirm
 
 # remove man pages and locale data
