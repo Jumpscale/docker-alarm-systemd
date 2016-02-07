@@ -1,8 +1,8 @@
-# Systemd inside ArchLinux
+# Systemd inside Alarm
 
 A base Dockerfile with which it is easy to build more specialized systemd-enabled containers. 
 
-Prebuild images are available at [docker-hub](https://registry.hub.docker.com/u/macedigital/docker-arch-systemd/) and can be pulled in.
+Prebuild images are available at [docker-hub](https://registry.hub.docker.com/u/jumpscale/docker-alarm-systemd/) and can be pulled in.
 
 ## Example
 
@@ -11,7 +11,7 @@ Lets build an image for running a nginx webserver:
 Save the following lines in a file called `Dockerfile` and run `docker build -t nginx-test .`.
 
 ````
-FROM macedigital/docker-arch-systemd
+FROM jumpscale/docker-alarm-systemd
 RUN pacman -S nginx --noconfirm; systemctl enable nginx.service
 EXPOSE 80
 CMD ["/usr/sbin/init"]
